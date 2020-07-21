@@ -5,7 +5,7 @@ import Subtotal from './Subtotal';
 import CurrencyFormat from 'react-currency-format';
 import './Checkout.css';
 function Checkout() {
-	const [{ basket }] = useStateValue();
+	const [{ basket, user }] = useStateValue();
 	return (
 		<div className='checkout'>
 			<div className='checkout_left'>
