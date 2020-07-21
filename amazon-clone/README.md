@@ -27,3 +27,6 @@ Your app is ready to be deployed!
 5. npm run build
 6. firebase deploy
 7. my website is created!
+
+https://clone-2b55b.web.app
+Check my website
