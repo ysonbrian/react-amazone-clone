@@ -24,7 +24,7 @@ function Home() {
 					title='Apple MacBook Pro'
 					price={2099.0}
 					rating={5}
-					image='https://m.media-amazon.com/images/I/71L2iBSyyOL._AC_UY436_FMwebp_QL65_.jpg'
+					image='https://www.bhphotovideo.com/images/images2500x2500/apple_mvvj2ll_a_16_macbook_pro_late_1520434.jpg'
 				/>
 			</div>
 			<div className='home_row'>
