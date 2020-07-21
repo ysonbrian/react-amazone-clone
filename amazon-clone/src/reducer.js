@@ -5,7 +5,6 @@ export const initialState = {
 export const getBasketTotal = (basket) =>
 	basket?.reduce((amount, item) => item.price + amount, 0);
 const reducer = (state, action) => {
-	console.log(action);
 	//console.log action to see what the information is
 	switch (action.type) {
 		// everytime action happens, it needs to return the data
@@ -21,7 +20,6 @@ const reducer = (state, action) => {
 				...state,
 				basket: [...state.basket, action.item],
 			};
-			break;
 		case 'REMOVE_FROM_BASKET':
 			//Logic for Removing item from basket
 
@@ -45,7 +43,6 @@ const reducer = (state, action) => {
 				...state,
 				basket: newBasket,
 			};
-			break;
 		default:
 			return state;
 	}

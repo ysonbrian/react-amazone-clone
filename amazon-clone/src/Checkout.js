@@ -4,8 +4,9 @@ import CheckoutProduct from './CheckoutProduct';
 import Subtotal from './Subtotal';
 import CurrencyFormat from 'react-currency-format';
 import './Checkout.css';
+
 function Checkout() {
-	const [{ basket, user }] = useStateValue();
+	const [{ basket }] = useStateValue();
 	return (
 		<div className='checkout'>
 			<div className='checkout_left'>
@@ -14,12 +15,13 @@ function Checkout() {
 					src='https://gos3.ibcdn.com/top-1568020025.jpg'
 					alt=''
 				/>
-				{basket.length === 0 ? (
+				{basket?.length === 0 ? (
 					<div>
 						<h2> Your Shopping Basket is empty</h2>
 					</div>
 				) : (
-					<div className='checkout_title'>
+					<div>
+						<h2 className='checkout_title'>Your Shopping Basket</h2>
 						{/* List all checkout products */}
 						{basket?.map((item) => (
 							<CheckoutProduct
@@ -33,7 +35,7 @@ function Checkout() {
 					</div>
 				)}
 			</div>
-			{basket.length > 0 && (
+			{basket?.length > 0 && (
 				<div className='checkout_right'>
 					<Subtotal />
 					{/* <Subtotal /> */}
